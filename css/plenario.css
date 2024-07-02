@@ -1,0 +1,73 @@
+.divisao{
+    margin: 0.5rem;
+}
+
+#campoDeBuscaPlenario{
+    background-image: url('../assets/search.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+.container-cards-plenario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.card-plenario{
+    border-left: 2px solid #52868f38;
+    border-top-left-radius: 5px;
+    border-right: 2px solid #52868f38;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    font-weight: 300;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #126b8111;
+    padding: 2rem;
+    gap: 1rem;  
+}
+
+.card-plenario:hover{
+    scale: 1.1;
+    margin-right: 0.7rem;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.36);
+}
+
+.inputPlenario{
+    text-align: center;
+    height: 3vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #cfe9ff;
+}
+
+.inputPlenario.data{
+    align-self: center;
+    width: 25%;
+}
+
+.inputPlenario.vagas{
+    align-self: center;
+    width: 25%;
+}
+
+.btn-secondary{
+    margin-right: 0%;
+    float: right;
+    color: white;
+    font-weight: 300;
+    background-color: red;
+    margin-left: 0%;
+}

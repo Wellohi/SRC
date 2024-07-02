@@ -1,0 +1,9 @@
+/* Variaveis */
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --btn-text: #fff;
+    --font-size-number: 62.5%;
+    --bg-button-secondary: #0E3E67;
+    --color-error: #D9534F;
+    --color-warn: #E1E506;
+}

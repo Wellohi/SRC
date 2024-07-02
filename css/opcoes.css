@@ -1,0 +1,212 @@
+.container-opcoes {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.modal{
+    min-width: 360px;
+    min-height: 360px;
+    max-width: 1080px;
+    max-height: 720px;
+    font-family: futara;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-top: 50px solid #124D81;
+    border-bottom: 50px solid #124D81;
+}
+
+.caixadesativar{
+    min-width: 250px;
+    min-height: 150px;
+    max-width: 450px;
+    max-height: 350px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.modal-content textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 0 3 auto;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.card-title {
+    display: flex;
+}
+
+.icone-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-card i {
+    font-size: 2rem;
+}
+
+/* .card:hover {
+    scale: 1.1;
+    gap: 1rem
+} */
+
+.cardfooter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    max-width: 16vh;
+    border: none;
+    /* Remove borders */
+    /* border-radius: 8px; */
+    border: black linear 4px;
+    color: white;
+    /* Add a text color */
+    padding: 14px 28px;
+    /* Add some padding */
+    cursor: pointer;
+    /* Add a pointer cursor on mouse-over */
+}
+.btn-primary{
+       margin-left: 0 !important;
+}  
+.btn-secondary{
+       margin-left: 0 !important;
+}
+
+/* botoes dos modais */
+.modalbtn{
+    margin: 10px auto !important;
+    margin-top: 33px;
+    background-color: #0b7dda1e;
+}
+
+.modalbtn:hover{
+    filter: brightness(1.3);
+}
+
+.modalbtn:active{
+    background-color: #022bb37a;
+}
+
+.success {
+    background-color: #124D81;
+}
+
+/* Green */
+.success:hover {
+    filter: brightness(1.3);
+}
+
+.info {
+    background-color: #124D81;
+    border: 1px solid #c7c7c7;
+}
+
+/* Blue */
+.info:hover {
+    filter: brightness(1.3);
+}
+
+.warning {
+    background-color: #ff9800;
+}
+
+/* Orange */
+.warning:hover {
+    filter: brightness(1.3);
+}
+
+.danger {
+    background-color: #fff;
+    color: black;
+    border: 1px solid #c7c7c7;
+}
+
+/* Red */
+.danger:hover {
+    filter: brightness(1.3);
+}
+
+.default {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Gray */
+.default:hover {
+    background: #ddd;
+}
+
+.inputOpcoes{
+    text-align: center;
+    font-size: large;
+    min-width: 50px;
+    width: 100%;
+    min-height: 40px;
+    max-height: 60px;
+    margin: 2.5% 0 2.5% 0;
+    background-color: #cfe9ff;
+    border-radius: 10px;
+}
