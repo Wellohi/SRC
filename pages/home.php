@@ -16,7 +16,6 @@ if (isset($_SESSION["users"]) && is_array($_SESSION["users"])) {
 
 ?>
 
-daleeeeeeeeeee teste 
 
 <!DOCTYPE html>
 <html lang="pt-BR">
