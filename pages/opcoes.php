@@ -45,8 +45,8 @@
 
 <dialog id="modal12" class="modal">
     <div class="modal-content">
-    <button id="openModal13" class="btn btn-primary modalbtn">Adicionar Gestor</button>
-    <button id="openModal12" class="btn btn-tertiary modalbtn">Remover Gestor</button>
+    <button id="openModal13" style="align-items: center;" class="btn btn-primary modalbtn">Adicionar Gestor</button>
+    <button id="openModal12" style="align-items: center;" class="btn btn-primary modalbtn">Remover Gestor</button>
     <button id="closeModal12" class="btn btn-secondary modalbtn">Fechar</button>
     </div>
 </dialog>

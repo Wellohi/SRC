@@ -112,8 +112,10 @@ $resultados = consultarTabela($pdo, "tipoEvento");; ?>
         </select>
         <span>Local:</span>
         <input type="text" class="inputPlenario">
-        <button type="submit" id="openModal11" class="btn btn-primary ">Adicionar</button>
-        <button type="reset" id="closeModal11" class="btn btn-secondary modalbtn">Fechar</button>
+        <button type="submit" id="openModal11" class="btn success btn-primary">Adicionar</button>
+        <!-- <button type="submit" id="adicionarCard" class="btn success btn-primary">Adicionar</button> -->
+        <button type="reset" id="closeModal11" class="btn danger btn-secondary">Fechar</button>
+        <!-- <button type="reset" id="closeModal7" class="btn danger btn-secondary">Fechar</button> -->
     </div>
 </dialog>
 
