@@ -79,9 +79,9 @@
 </dialog>
 <dialog id="modal9" class="modal">
     <div class="modal-content">
-        <h2>Adicionar Tipo Evento</h2>
+        <!-- <h2>Adicionar Tipo Evento</h2> -->
         <form>
-            <input type="text" class="inputOpcoes">
+            <input type="text" class="inputOpcoes" placeholder="ADICIONAR TIPO DO EVENTO">
             <button type="submit" class="btn btn-primary modalbtn">Adicionar</button>
             <button type="reset" id="closeModal9" class="btn btn-secondary modalbtn">Fechar</button>
         </form>
@@ -89,7 +89,7 @@
 </dialog>
 <dialog id="modal3" class="modal">
     <div class="modal-content">
-        <h2>Adicionar Condicionante</h2>
+        <!-- <h2>Adicionar Condicionante</h2> -->
         <form method="post" action="../backend/condicionante.php">
             <h4>Nome da Condicionante</h4>
             <input placeholder="NOME" type="text" class="inputOpcoes" name="adicionarCondicionante" id="adicionarCondicionante">
