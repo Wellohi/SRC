@@ -6,10 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['inputNomePlenario'];
     $data_plenario = $_POST['inputDataPlenario'];
     $vagas_plenario = $_POST['inputVagasPlenario'];
-    $tipo = $_POST['Tipo'];  
-    $nomeCondicionante = $_POST['Condicionante'];
-    $local = $_POST['Local'];
-
+    $tipo = $_POST['tipoEventoPlenario'];
+    $nomeCondicionante = $_POST['condicionanteDoEventoPlenario'];
+    $local = $_POST['inputLocalPlenario'];
 
     $insercao = "INSERT INTO plenario (Nome, Data, Vagas, Tipo, Condicionante, Local) VALUES (?, ?, ?, ?, ?, ?)";
     $insercao = $pdo->prepare($insercao);
