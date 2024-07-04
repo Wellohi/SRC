@@ -63,7 +63,7 @@
                 <dialog id="modal7" class="modal">
                     <div class="modal-content">
                         <h2>Deseja Adicionar um Evento ?</h2>
-                        <form id="formularioAdicionarEvento" method="post" action="../backend/criarCard.php">
+                        <form id="formularioAdicionarEvento" method="post" action="../backend/cardEvento.php">
                             <div class="row">
                                 <span>Nome do Evento:</span>
                                 <br>

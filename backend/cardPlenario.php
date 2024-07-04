@@ -1,16 +1,20 @@
 <?php
 include_once('./conexao.php');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome = $_POST['inputNomeDoEvento'];
-    $tipo = $_POST['Tipo'];
-    $nomeCondicionante = $_POST['Condicionante'];
-    $data_evento = $_POST['inputDataDoEvento'];
 
-    $insercao = "INSERT INTO evento (Nome, Tipo, Condicionante, Data_Evento) VALUES (?, ?, ?, ?)";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['inputNomePlenario'];
+    $data_plenario = $_POST['inputDataPlenario'];
+    $vagas_plenario = $_POST['inputVagasPlenario'];
+    $tipo = $_POST['Tipo'];  
+    $nomeCondicionante = $_POST['Condicionante'];
+    $local = $_POST['Local'];
+
+
+    $insercao = "INSERT INTO plenario (Nome, Data, Vagas, Tipo, Condicionante, Local) VALUES (?, ?, ?, ?, ?, ?)";
     $insercao = $pdo->prepare($insercao);
     try {
-        $insercao->execute([$nome, $tipo, $nomeCondicionante, $data_evento]);
+        $insercao->execute([$nome, $data_plenario, $vagas_plenario, $tipo, $nomeCondicionante, $local]);
         echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     } catch (PDOException $e) {
         echo 'Erro ao inserir no banco: ' . $e->getMessage();
@@ -27,6 +31,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
-
-
-?>

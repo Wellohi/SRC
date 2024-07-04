@@ -50,7 +50,6 @@
                         echo '<tr>';
                         echo '<td>' . $row['Nome'] . '</td>';
                         echo '<td>' . $row['Data'] . '</td>';
-                        echo '<td>' . $row['Pontuacao'] . '</td>';
                         echo '<td>';
                         echo '<button class="btn info" onclick="acessarPlenario(' . $row['ID'] . ')">Acessar</button>';
                         echo '<button class="btn danger" onclick="excluirPlenario(' . $row['ID'] . ')">Excluir</button>';
@@ -66,7 +65,7 @@
         </table>
 
     </div>
-</div> 
+</div>
 
 <?php
 function consultarTabela($pdo, $tabela)
@@ -89,32 +88,34 @@ $resultados = consultarTabela($pdo, "tipoEvento");; ?>
 
 
 <dialog id="modal11" class="modal">
-    <div class="modal-content">
-        <span>Nome Do Plenário:</span>
-        <input type="text" class="inputPlenario">
-        <span>Data:</span>
-        <input type="date" class="inputPlenario data">
-        <span>Vagas :</span>
-        <input type="number" class="inputPlenario vagas">
-        <span>Tipo De Evento :</span>
-        <select name="tipoEventoPlenario" id="tipoEventoPlenario" style="width: 100%;" class="inputPlenario">
-            <option value="" data-default disabled selected>Selecione</option>
-            <?php foreach ($resultados as $resultado) { ?>
-                <option value="<?php echo $resultado['nomeTipoEvento']; ?>"><?php echo $resultado['nomeTipoEvento']; ?></option>
-            <?php } ?>
-        </select>
-        <span>Condicionate</span>
-        <select name="condicionanteDoEventoPlenario" id="condicionanteDoEventoPlenario" class="inputPlenario">
-            <option value="" data-default disabled selected>Selecione</option>
-            <?php foreach ($resultadoConsultaCondicionantes as $resultadoConsultaCondicionante) { ?>
-                <option value="<?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?>"><?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?></option>
-            <?php } ?>
-        </select>
-        <span>Local:</span>
-        <input type="text" class="inputPlenario">
-        <button type="submit" id="openModal11" class="btn btn-primary ">Adicionar</button>
-        <button type="reset" id="closeModal11" class="btn btn-secondary modalbtn">Fechar</button>
-    </div>
+    <form id="formularioAdicionarEvento" method="post" action="../backend/cardPlenario.php">
+        <div class="modal-content">
+            <span>Nome Do Plenário:</span>
+            <input type="text" class="inputPlenario" id="inputNomePlenario">
+            <span>Data:</span>
+            <input type="date" class="inputPlenario data" id="inputDataPlenario">
+            <span>Vagas :</span>
+            <input type="number" class="inputPlenario vagas" id="inputVagasPlenario">
+            <span>Tipo De Evento :</span>
+            <select name="tipoEventoPlenario" id="tipoEventoPlenario" style="width: 100%;" class="inputPlenario">
+                <option value="" data-default disabled selected>Selecione</option>
+                <?php foreach ($resultados as $resultado) { ?>
+                    <option value="<?php echo $resultado['nomeTipoEvento']; ?>"><?php echo $resultado['nomeTipoEvento']; ?></option>
+                <?php } ?>
+            </select>
+            <span>Condicionate</span>
+            <select name="condicionanteDoEventoPlenario" id="condicionanteDoEventoPlenario" class="inputPlenario">
+                <option value="" data-default disabled selected>Selecione</option>
+                <?php foreach ($resultadoConsultaCondicionantes as $resultadoConsultaCondicionante) { ?>
+                    <option value="<?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?>"><?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?></option>
+                <?php } ?>
+            </select>
+            <span>Local:</span>
+            <input type="text" class="inputPlenario">
+            <button type="submit" id="openModal11" class="btn btn-primary ">Adicionar</button>
+            <button type="reset" id="closeModal11" class="btn btn-secondary modalbtn">Fechar</button>
+        </div>
+    </form>
 </dialog>
 
 <script>
