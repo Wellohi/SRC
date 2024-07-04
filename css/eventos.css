@@ -131,6 +131,7 @@
 }
 
 .btn-primary {
+    align-items: center;
     color: white;
     background-color: #124D81;
     width: 110px;

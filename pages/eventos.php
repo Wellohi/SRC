@@ -7,7 +7,7 @@
 
         <div class="btnadd">
             <button id="openModal7" style="position: relative;
-    margin: 0px 0px 0px 90%;" class="btn success">Adicionar</button>
+    margin: 0px 0px 0px 87%; max-width: 14em !important;" class="btn success">Adicionar evento</button>
         </div>
 
         <div class="container-table">
@@ -62,8 +62,8 @@
 
                 <dialog id="modal7" class="modal">
                     <div class="modal-content">
-                        <h2>Deseja Adicionar um Evento ?</h2>
-                        <form id="formularioAdicionarEvento" method="post" action="../backend/cardEvento.php">
+                        <!-- <h2>Deseja Adicionar um Evento ?</h2> -->
+                        <form id="formularioAdicionarEvento" method="post" action="../backend/criarCard.php">
                             <div class="row">
                                 <span>Nome do Evento:</span>
                                 <br>

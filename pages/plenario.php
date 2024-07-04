@@ -4,7 +4,7 @@
 </div>
 
 <button class="btn success" id="openModal11" style="position: relative;
-    margin: 0px 0px 0px 90%;">Cadastrar</button>
+    margin: 0px 0px 0px 87%; max-width: 14em !important;">Cadastrar plenaria</button>
 
 
 
