@@ -127,7 +127,7 @@
     </div>
 </div>
 
-<dialog id="modal-acessarEvento" class="modal">
+<dialog id="modal-acessarEvento" class="modal" style="min-height: 310px; !important">
     <div class="modal-content">
 
         <table id="eventosTable">
@@ -175,9 +175,9 @@
                 <?php } ?>
                 </table>
                 <div class="button-groups-cardEventos" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
-                    <button class="btn success">Adicionar Novo Participante</button>
-                    <button class="btn warning">Remover Todos</button>
-                    <button type="button" class="btn danger" onclick="closeModalEvento()">Sair</button>
+                    <button class="btn success" style="max-width: 14em;">Adicionar Participante</button>
+                    <button class="btn warning" style="max-width: 14em !important; margin-right: 26% !important; background-color: #124D81 !important;">Remover Todos</button>
+                    <button type="button" class="btn danger" style="width: 8em !important;" onclick="closeModalEvento()">Sair</button>
 
                 </div>
 </dialog>

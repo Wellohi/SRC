@@ -7,7 +7,8 @@
                 <p>Adicionar Novo Gestor</p>
             </div>
             <div class="icone-card">
-                <i class="fa-solid fa-building-user"></i>
+                <!-- <i class="fa-solid fa-building-user"></i> -->
+                <i class="fa-solid fa-user-plus"></i>
             </div>
             <div class="cardfooter">
                 <button id="openModal12" class="btn success">Editar</button>
@@ -21,7 +22,8 @@
             </div>
 
             <div class="icone-card">
-                <i class="fa-solid fa-ambulance"></i>
+                <!-- <i class="fa-solid fa-ambulance"></i> -->
+                <i class="fa-solid fa-people-group"></i>
             </div>
             <div class="cardfooter">
                 <button id="openModal9" class="btn success">Adicionar</button>
@@ -33,7 +35,8 @@
                 <p>Adicionar Condicionante</p>
             </div>
             <div class="icone-card">
-                <i class="fa-solid fa-calendar-days"></i>
+                <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                <i class="fa-solid fa-calendar-plus"></i>
             </div>
             <div class="cardfooter">
                 <button id="openModal3" class="btn success">Adicionar</button>
@@ -53,12 +56,12 @@
 <dialog id="modal13" class="modal">
     <div class="modal-content">
         <form method="post" action="../backend/insert_Gestor.php">
-            <p>Deseja adicionar um novo Gestor?</p>
-            <input type="text" name="nome" id="nome" autocomplete="off" placeholder="NOME DO GESTOR" required>
+            <!-- <p>Deseja adicionar um novo Gestor?</p> -->
+            <input type="text" name="nome" id="nome" autocomplete="off" style="width: 100% !important;" placeholder="NOME DO GESTOR" required>
             <br>
-            <input type="email" name="email" id="email" placeholder="INSIRA O E-MAIL DO GESTOR" required>
+            <input type="email" name="email" id="email" style="width: 100% !important;" placeholder="INSIRA O E-MAIL DO GESTOR" required>
             <br>
-            <input type="password" name="senha" id="senha" placeholder="INSIRA UMA SENHA PARA O GESTOR" required>
+            <input type="password" name="senha" id="senha" style="width: 100% !important;" placeholder="INSIRA UMA SENHA PARA O GESTOR" required>
             <br>
             <button type="submit" class="btn btn-primary float-left">Adicionar</button>
             <button type="reset" id="closeModal13" class="btn btn-secondary float-right">Fechar</button>
@@ -77,7 +80,7 @@
         </form>
     </div>
 </dialog>
-<dialog id="modal9" class="modal">
+<dialog id="modal9" class="modal" style="min-height: 310px; !important">
     <div class="modal-content">
         <!-- <h2>Adicionar Tipo Evento</h2> -->
         <form>
