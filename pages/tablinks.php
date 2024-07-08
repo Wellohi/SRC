@@ -7,7 +7,7 @@
     <button class="tablinks" onclick="openTab(event, 'conselheiro')"><i class="fa-solid fa-user-group"></i> Conselheiros</button>
 
     <?php if ($adm) : ?>
-        <button class="tablinks" onclick="openTab(event, 'eventos')"><i class="fa-solid fa-calendar-plus"></i>
+        <button class="tablinks" onclick="openTab(event, 'eventos')"><i class="fa-solid fa-calendar-days"></i>
             Eventos</button>
     <?php endif; ?>
 

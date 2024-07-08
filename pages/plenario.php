@@ -34,7 +34,10 @@
             <tr>
                 <th>Nome Do Plenário</th>
                 <th>Data</th>
-                <th>Pontuação</th>
+                <th>Vagas</th>
+                <th>Tipo</th>
+                <th>Condicionante</th>
+                <th>Local</th>
                 <th>Ações</th>
             </tr>
             </thead>
@@ -50,11 +53,15 @@
                         echo '<tr>';
                         echo '<td>' . $row['Nome'] . '</td>';
                         echo '<td>' . $row['Data'] . '</td>';
-                        echo '<td>';
-                        echo '<button class="btn info" onclick="acessarPlenario(' . $row['ID'] . ')">Acessar</button>';
-                        echo '<button class="btn danger" onclick="excluirPlenario(' . $row['ID'] . ')">Excluir</button>';
-                        echo '<button class="btn warning" onclick="bloquearPlenario(' . $row['ID'] . ')">Bloquear</button>';
+                        echo '<td>' . $row['Vagas'] . '</td>';
+                        echo '<td>' . $row['Tipo'] . '</td>';
+                        echo '<td>' . $row['Condicionante'] . '</td>';
+                        echo '<td>' . $row['Local'] . '</td>';
+                        echo '<td style=" width: 5%;">';
+                        echo '<button class="btn info" style="width: 90px; margin-bottom: 2px" onclick="openModalEvento()">Acessar</button>';
+                        echo '<button class="btn danger" style="width: 90px;" onclick="excluirCard()">Excluir</button>';
                         echo '</td>';
+                        echo '</tr>';
                         echo '</tr>';
                     }
                 } else {
