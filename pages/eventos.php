@@ -15,7 +15,7 @@
                 <table id="eventosTable" style="width: 100%;">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th class="hideColumn">ID</th>
                             <th>Nome Do Evento</th>
                             <th>Tipo Do Evento</th>
                             <th>Condicionante</th>
@@ -33,7 +33,7 @@
                         if (count($resultados) > 0) {
                             foreach ($resultados as $row) {
                                 echo '<tr>';
-                                echo '<td>' . $row['ID'] . '</td>';
+                                echo '<td class="hideColumn">' . $row['ID'] . '</td>';
                                 echo '<td>' . $row['Nome'] . '</td>';
                                 echo '<td>' . $row['Tipo'] . '</td>';
                                 echo '<td>' . $row['Condicionante'] . '</td>';
@@ -63,7 +63,7 @@
                 <dialog id="modal7" class="modal">
                     <div class="modal-content">
                         <!-- <h2>Deseja Adicionar um Evento ?</h2> -->
-                        <form id="formularioAdicionarEvento" method="post" action="../backend/criarCard.php">
+                        <form id="formularioAdicionarEvento" method="post" action="../backend/cardEvento.php">
                             <div class="row">
                                 <span>Nome do Evento:</span>
                                 <br>
@@ -132,7 +132,7 @@
 
         <table id="eventosTable">
             <tr>
-                <th>ID</th>
+                <th class="hideColumn">ID</th>
                 <th>Nome Do Evento</th>
                 <th>Tipo Do Evento</th>
                 <th>Condicionante</th>
@@ -140,7 +140,7 @@
                 <th>Pontuação</th>
             </tr>
             <tr>
-                <td id="eventoId"></td>
+                <td id="eventoId" class="hideColumn"></td>
                 <td id="eventoNome"></td>
                 <td id="eventoTipo"></td>
                 <td id="eventoCondicionante"></td>

@@ -169,3 +169,8 @@
     max-width: 22em;
     word-break: break-word;
 }
+
+
+.hideColumn{
+    display: none;
+}
