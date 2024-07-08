@@ -15,6 +15,7 @@
                 <table id="eventosTable" style="width: 100%;">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nome Do Evento</th>
                             <th>Tipo Do Evento</th>
                             <th>Condicionante</th>
@@ -32,6 +33,7 @@
                         if (count($resultados) > 0) {
                             foreach ($resultados as $row) {
                                 echo '<tr>';
+                                echo '<td>' . $row['ID'] . '</td>';
                                 echo '<td>' . $row['Nome'] . '</td>';
                                 echo '<td>' . $row['Tipo'] . '</td>';
                                 echo '<td>' . $row['Condicionante'] . '</td>';
@@ -39,6 +41,7 @@
                                 echo '<td>' . $row['Pontuacao'] . '</td>';
                                 echo '<td style=" width: 5%;">';
                                 echo '<button class="btn info" style="width: 90px; margin-bottom: 2px" onclick="openModalEvento('
+                                    . $row['ID'] . ', \''
                                     . $row['Nome'] . '\', \''
                                     . $row['Tipo'] . '\', \''
                                     . $row['Condicionante'] . '\', \''
@@ -124,11 +127,12 @@
     </div>
 </div>
 
-<dialog id="modal-acessarEvento" class="modal" style="min-height: 310px !important;">
+<dialog id="modal-acessarEvento" class="modal">
     <div class="modal-content">
 
         <table id="eventosTable">
             <tr>
+                <th>ID</th>
                 <th>Nome Do Evento</th>
                 <th>Tipo Do Evento</th>
                 <th>Condicionante</th>
@@ -136,6 +140,7 @@
                 <th>Pontuação</th>
             </tr>
             <tr>
+                <td id="eventoId"></td>
                 <td id="eventoNome"></td>
                 <td id="eventoTipo"></td>
                 <td id="eventoCondicionante"></td>
@@ -170,9 +175,9 @@
                 <?php } ?>
                 </table>
                 <div class="button-groups-cardEventos" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
-                    <button class="btn success" style="max-width: 14em;">Adicionar Participante</button>
-                    <button class="btn warning" style="max-width: 14em !important; margin-right: 26% !important; background-color: #124D81 !important;">Remover Todos</button>
-                    <button type="button" class="btn danger" style="width: 8em !important;" onclick="closeModalEvento()">Sair</button>
+                    <button class="btn success">Adicionar Novo Participante</button>
+                    <button class="btn warning">Remover Todos</button>
+                    <button type="button" class="btn danger" onclick="closeModalEvento()">Sair</button>
 
                 </div>
 </dialog>

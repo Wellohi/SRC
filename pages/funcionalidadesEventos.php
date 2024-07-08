@@ -125,6 +125,7 @@
 
     function openModalEvento(id, nome, tipo, condicionante, data, pontuacao) {
     // Definir os valores no modal
+    document.querySelector('#eventosTable #eventoId').textContent = id;
     document.querySelector('#eventosTable #eventoNome').textContent = nome;
     document.querySelector('#eventosTable #eventoTipo').textContent = tipo;
     document.querySelector('#eventosTable #eventoCondicionante').textContent = condicionante;
