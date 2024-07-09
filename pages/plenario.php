@@ -32,6 +32,7 @@
     <div style="width: 100%; overflow-y: scroll;">
         <table id="plenariosTable" style="width: 100%;">
             <tr>
+            <th class="hideColumn">ID</th>
                 <th>Nome Do Plenário</th>
                 <th>Data</th>
                 <th>Vagas</th>
@@ -51,6 +52,7 @@
                 if (count($resultados) > 0) {
                     foreach ($resultados as $row) {
                         echo '<tr>';
+                        echo '<td class="hideColumn">' . $row['ID'] . '</td>';
                         echo '<td>' . $row['Nome'] . '</td>';
                         echo '<td>' . $row['Data'] . '</td>';
                         echo '<td>' . $row['Vagas'] . '</td>';
@@ -59,7 +61,7 @@
                         echo '<td>' . $row['Local'] . '</td>';
                         echo '<td style=" width: 5%;">';
                         echo '<button class="btn info" style="width: 90px; margin-bottom: 2px" onclick="openModalEvento()">Acessar</button>';
-                        echo '<button class="btn danger" style="width: 90px;" onclick="excluirCard()">Excluir</button>';
+                        echo '<button class="btn danger" style="width: 90px;" onclick="excluirCardPlenario(' . $row['ID'] . ')">Excluir</button>';
                         echo '</td>';
                         echo '</tr>';
                         echo '</tr>';
