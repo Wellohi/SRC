@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="../css/conselheiros.css">
+<!-- <div class="divisao">
+    <input type="text" id="campoDeBuscaPlenario" onkeyup="buscarNoCampoPlenario()" placeholder="Digite o Nome Do Conselheiro...">
+</div> -->
 
 <div class="group-buttons">
   <button class="btn btn-ranking" onclick="generateReport()">Gerar Relatório</button>
