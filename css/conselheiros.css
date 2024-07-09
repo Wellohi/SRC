@@ -119,11 +119,7 @@
     margin: 10px 10px -16px 10px;
 }
 
-.btn-ranking{
-    margin: 0px 10vh;
-    background: #04AA6D;
-    border-radius: 8px;
-}
+.btn-ranking{position: relative;margin-left: 87%;float: right;max-width: 14em !important;background-color: #124D81;}
 
 .head-tab, .head-tab th{
     font-weight:400;
@@ -186,4 +182,9 @@ input[type=number]::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.classificando{
+    cursor: pointer;
+    padding: 3px 5px;
 }

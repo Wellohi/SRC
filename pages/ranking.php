@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="../css/conselheiros.css">
 
 <div class="group-buttons">
-  <button class="btn btn-ranking" onclick="sortTableByName()">Ordem Alfabética</button>
-  <button class="btn btn-ranking" onclick="sortTableByScore()">Ordem de Pontuação</button>
   <button class="btn btn-ranking" onclick="generateReport()">Gerar Relatório</button>
 </div>
 
@@ -12,8 +10,8 @@
     <div style="width: 100%;" class="tableOverflow">
         <table id="conselheirosTable" style="width: 100%;">
           <tr class="head-tab">
-            <th>Nome do Conselheiro</th>
-            <th>Pontuação</th>
+            <th onclick="sortTableByName()" class="classificando"> Nome do Conselheiro <i class="fa-solid fa-arrow-up-z-a"></i> </th>
+            <th onclick="sortTableByScore()" class="classificando"> Pontuação <i class="fa-solid fa-arrow-up-wide-short"></i> </th> 
           </tr>
           <?php
           // Preparando a consulta
@@ -34,7 +32,7 @@
         </table>
     </div>
 </div>
-<br>
+<br>''
 
 <dialog id="modal-acessarRankingConselheiro" class="modal">
   <div class="modal-content">
