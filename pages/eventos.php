@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="../css/eventos.css">      
 
         <!-- Atualizado <input type="text" id="campoDeBusca" onkeyup="buscar()" placeholder="Digite o Nome Do evento..."> -->
-        <div class="divisao">
+        <!-- <div class="divisao">
             <input type="text" id="campoDeBusca" onkeyup="buscarNoCampoPlenario()" placeholder="Digite o Nome Do evento...">
-        </div>
+        </div> -->
 
         <div class="btnadd">
             <button id="openModal7" style="position: relative;
