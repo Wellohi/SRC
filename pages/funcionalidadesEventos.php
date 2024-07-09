@@ -156,6 +156,24 @@
         }
     }
 
+    
+    function excluirCardPlenario(id) {
+    if (confirm("O plenario será excluido PERMANENTEMENTE, você deseja excluir?")) {
+        // Enviar solicitação de exclusão para arquivo PHP
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Atualizar a lista de cards após a ex+usão
+                location.reload();
+            }
+        };
+        xhttp.open("POST", "../backend/excluirCardplenario.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("id=" + id);
+    }
+}
+
+
     function buscar() {
         //Pegar o input de busca
         const campoDeBusca = document.getElementById('campoDeBusca');
