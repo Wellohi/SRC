@@ -31,13 +31,15 @@
 }
 
 .box-pesquisa {
-    margin-top: 5px; 
+    margin-top: 5px;
     width: 10em;
+    border: none;
+    border-bottom: 1px solid black;
     height: 2.5em;
     /* border-radius: 5px; */
     text-align: center;
     color: #666666;
-    background-color: #DDF7FF;
+    /* background-color: #DDF7FF; */
 }
 
 .box-lupa {
