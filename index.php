@@ -41,11 +41,11 @@ require_once('./backend/conexao.php');
             <fieldset id="fieldset-index">
                 <div class="input-group">
                     <label class="upperLabel" for="">Usuário </label>
-                    <input type="text" id="inputemail" name="nome" required>
+                    <input type="text" id="inputemail" class="lowerLabel" name="nome" required>
                 </div>
                 <div class="input-group">
                     <label class="upperLabel" for="">Senha </label>
-                    <input type="password" name="senha" id="inputsenha" autocomplete="off" required>
+                    <input type="password" name="senha" id="inputsenha" class="lowerLabel" autocomplete="off" required>
                 </div>
                 <div class="btn">
                     <button type="submit">Acessar</button>

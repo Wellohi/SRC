@@ -1,4 +1,8 @@
 <link rel="stylesheet" href="../css/conselheiros.css">
+<link rel="stylesheet" href="../css/opcoes.css">
+<link rel="stylesheet" href="../css/principal.css">
+<link rel="stylesheet" href="../css/reset.css">
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Botão para adicionar conselheiro -->

@@ -1,4 +1,8 @@
 <link rel="stylesheet" href="../css/conselheiros.css">
+<link rel="stylesheet" href="../css/opcoes.css">
+<link rel="stylesheet" href="../css/principal.css">
+<link rel="stylesheet" href="../css/reset.css">
+
 <!-- <div class="divisao">
     <input type="text" id="campoDeBuscaPlenario" onkeyup="buscarNoCampoPlenario()" placeholder="Digite o Nome Do Conselheiro...">
 </div> -->
