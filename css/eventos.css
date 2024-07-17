@@ -168,10 +168,21 @@
 
 .modal-content td{
     max-width: 22em;
-    word-break: break-word;
+    word-break: keep-all;
 }
 
 
 .hideColumn{
     display: none;
+}
+
+.conselheirosAdicionados{
+    min-width: 150px;
+}
+
+.removerBtn{
+    display: flex; 
+    word-break:keep-all; 
+    justify-content: center; 
+    min-width: 50px
 }

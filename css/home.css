@@ -253,6 +253,7 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) td {
   background-color: #ebeaea; /* Cor de fundo para linhas ímpares */
+  min-width: 130px;
 }
 
 .container-table-fila-de-espera{

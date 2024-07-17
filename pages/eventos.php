@@ -40,14 +40,14 @@
                                 echo '<td>' . $row['Data_Evento'] . '</td>';
                                 echo '<td>' . $row['Pontuacao'] . '</td>';
                                 echo '<td style=" width: 5%;">';
-                                echo '<button class="btn info" style="width: 90px; margin-bottom: 2px" onclick="openModalEvento('
+                                echo '<button class="btn info" style="min-width: 90px; max-width:91px; margin: 0 10%; margin-bottom: 2px" onclick="openModalEvento('
                                     . $row['ID'] . ', \''
                                     . $row['Nome'] . '\', \''
                                     . $row['Tipo'] . '\', \''
                                     . $row['Condicionante'] . '\', \''
                                     . $row['Data_Evento'] . '\', '
                                     . $row['Pontuacao'] . ')">Acessar</button>';
-                                echo '<button class="btn danger" style="width: 90px;" onclick="excluirCard(' . $row['ID'] . ')">Excluir</button>';
+                                echo '<button class="btn danger" style="min-width: 90px; max-width:91px; margin: 0 10%;" onclick="excluirCard(' . $row['ID'] . ')">Excluir</button>';
                                 echo '</td>';
                                 echo '</tr>';
                             }
@@ -132,21 +132,45 @@
 
         <table id="eventosTable">
             <tr>
-                <th class="hideColumn">ID</th>
-                <th>Nome Do Evento</th>
-                <th>Tipo Do Evento</th>
-                <th>Condicionante</th>
+                <!-- <th class="hideColumn">ID</th> -->
+                <th>Conselheiros</th>
+                <th>Ações</th>
+                <!-- <th>Condicionante</th>
                 <th>Data do Evento</th>
-                <th>Pontuação</th>
+                <th>Pontuação</th> -->
             </tr>
-            <tr>
+            <!-- <tr>
                 <td id="eventoId" class="hideColumn"></td>
                 <td id="eventoNome"></td>
                 <td id="eventoTipo"></td>
                 <td id="eventoCondicionante"></td>
                 <td id="eventoData"></td>
-                <td id="eventoPontuacao"></td>
-            </tr>
+                <td id="eventoPontuacao"></td> 
+            </tr> -->
+            <?php
+                // Preparando a consulta
+                $stmt = $pdo->prepare("SELECT id, nome FROM conselheiro WHERE excluido = 1 ORDER BY nome");
+
+                // Executando a consulta
+                $stmt->execute();
+
+                // Obtendo os resultados
+                $resultados = $stmt->fetchAll();
+
+                // Iterando sobre os resultados para exibir na tabela
+                foreach ($resultados as $resultado) {
+                    echo "<tr>";
+                    echo "<td>" . $resultado['nome'] . "</td>";
+                    echo "<td class='conselheirosAdicionados'>";
+                    echo "<button id='openModal10' class='btn btn-primary btnadd btn-ativar' style='align-items: center; margin: 0px 0px 0px 16% !important;' 
+                    data-id='" . $resultado['id'] . "'
+                    data-nome='" . $resultado['nome'] . "' 
+                    class='removerBtn'>Remover</button>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+
+                ?>
         </table>
         <div class="tabelaDeAdicaoERemocao">
             <?php
@@ -175,8 +199,8 @@
                 <?php } ?>
                 </table>
                 <div class="button-groups-cardEventos" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
-                    <button class="btn success">Adicionar Novo Participante</button>
-                    <button class="btn warning">Remover Todos</button>
+                    <button class="btn success" style="min-width: 130px;">Adicionar Participantes</button>
+                    <button class="btn danger" style="min-width: 130px;">Remover Todos</button>
                     <button type="button" class="btn danger" onclick="closeModalEvento()">Sair</button>
 
                 </div>
