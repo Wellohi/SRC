@@ -162,7 +162,7 @@
                     echo "<tr>";
                     echo "<td>" . $resultado['nome'] . "</td>";
                     echo "<td class='conselheirosAdicionados'>";
-                    echo "<button id='openModal10' class='btn btn-primary btnadd btn-ativar' style='align-items: center; margin: 0px 0px 0px 16% !important;' 
+                    echo "<button id='openModal10' class='btn btn-primary btnadd btn-ativar' style='align-items: center; min-width: 90px; margin: 0px 0px 0px 16% !important;' 
                     data-id='" . $resultado['id'] . "'
                     data-nome='" . $resultado['nome'] . "' 
                     class='removerBtn'>Remover</button>";
