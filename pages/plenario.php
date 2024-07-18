@@ -4,7 +4,7 @@
 </div> -->
 
 <button class="btn success" id="openModal11" style="position: relative;
-    margin: 0px 0px 0px 87%; max-width: 14em !important;">Cadastrar plenaria</button>
+    margin: 0px 0px 0px 86%; max-width: 14em !important;">Cadastrar plenaria</button>
 
 
 
@@ -60,8 +60,8 @@
                         echo '<td>' . $row['Condicionante'] . '</td>';
                         echo '<td>' . $row['Local'] . '</td>';
                         echo '<td style=" width: 5%;">';
-                        echo '<button class="btn info" style="width: 90px; margin-bottom: 2px" onclick="openModalEvento()">Acessar</button>';
-                        echo '<button class="btn danger" style="width: 90px;" onclick="excluirCardPlenario(' . $row['ID'] . ')">Excluir</button>';
+                        echo '<button class="btn info" style="min-width: 90px !important; max-width: 91px !important; margin: 0 10% !important; margin-bottom: 2px !important;" onclick="openModalEvento()">Acessar</button>';
+                        echo '<button class="btn danger" style="min-width: 90px !important; max-width: 91px !important; margin: 0 10% !important; margin-bottom: 2px !important; onclick="excluirCardPlenario(' . $row['ID'] . ')">Excluir</button>';
                         echo '</td>';
                         echo '</tr>';
                         echo '</tr>';

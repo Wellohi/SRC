@@ -128,9 +128,10 @@
 </div>
 
 <dialog id="modal-acessarEvento" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" style="width: 620px">
 
         <table id="eventosTable">
+            <h2>TABELA DE TESTE</h2>
             <tr>
                 <!-- <th class="hideColumn">ID</th> -->
                 <th>Conselheiros</th>
@@ -199,9 +200,9 @@
                 <?php } ?>
                 </table>
                 <div class="button-groups-cardEventos" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
-                    <button class="btn success" style="min-width: 130px;">Adicionar Participantes</button>
-                    <button class="btn danger" style="min-width: 130px;">Remover Todos</button>
-                    <button type="button" class="btn danger" onclick="closeModalEvento()">Sair</button>
+                    <button class="btn success" style="min-width: 15em !important;">Adicionar Participantes</button>
+                    <button class="btn danger" style="min-width: 15em !important;">Remover Todos</button>
+                    <button type="button" class="btn danger" style="min-width: 10em !important;" onclick="closeModalEvento()">Sair</button>
 
                 </div>
 </dialog>
