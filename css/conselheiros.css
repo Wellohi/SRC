@@ -70,6 +70,10 @@
     font-size: large;
 }
 
+.tabelaNomes{
+    height: auto;
+}
+
 .btn-primary {
     align-items: center;
     float: left;
@@ -153,6 +157,8 @@
 
 tr{
     font-weight: normal !important;
+    max-height: 40px;
+    min-height: 30px;
 }
 
 #adicionarConselheiro {

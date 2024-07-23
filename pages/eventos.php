@@ -14,7 +14,7 @@
             <div style="width: 100%; " class="tableOverflow">
                 <table id="eventosTable" style="width: 100%;">
                     <thead>
-                        <tr>
+                        <tr class="tableEvento">
                             <th class="hideColumn">ID</th>
                             <th>Nome Do Evento</th>
                             <th>Tipo Do Evento</th>
@@ -38,8 +38,8 @@
                                 echo '<td>' . $row['Tipo'] . '</td>';
                                 echo '<td>' . $row['Condicionante'] . '</td>';
                                 echo '<td>' . $row['Data_Evento'] . '</td>';
-                                echo '<td>' . $row['Pontuacao'] . '</td>';
-                                echo '<td style=" width: 5%;">';
+                                echo '<td style="width: 30px">' . $row['Pontuacao'] . '</td>';
+                                echo '<td style=" width: 100px;">';
                                 echo '<button class="btn info" style="min-width: 90px; max-width:91px; margin: 0 10%; margin-bottom: 2px" onclick="openModalEvento('
                                     . $row['ID'] . ', \''
                                     . $row['Nome'] . '\', \''

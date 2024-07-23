@@ -186,3 +186,7 @@
     justify-content: center; 
     min-width: 50px
 }
+
+.tableEvento th{
+    height: 20px;
+}

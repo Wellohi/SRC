@@ -80,7 +80,7 @@
             <!-- <p>Deseja adicionar um novo conselheiro?</p> -->
             <input type="text" name="adicionarConselheiro" id="adicionarConselheiro" autocomplete="off" placeholder="NOME DO CONSELHEIRO">
             <br>
-            <button type="submit" class="btn btn-primary float-left"">Adicionar</button>
+            <button type="submit" class="btn btn-primary float-left">Adicionar</button>
             <button type="reset" id="closeModal1" class="btn btn-secondary float-right">Fechar</button>
         </form>
     </div>
@@ -92,7 +92,7 @@
     <div style=" width: 100%;" class="tableOverflow">
         <table id="tabela-cadastro" style="width: 100%;">
             <thead>
-                <tr class="">
+                <tr>
                     <th>Nome do Conselheiro</th>
                     <th style= "width:15px">Acessar Conselheiro</th>
                     <th style= "width:15px">Desativar Conselheiro</td>
@@ -111,7 +111,7 @@
 
                 // Iterando sobre os resultados para exibir na tabela
                 foreach ($resultados as $resultado) {
-                    echo "<tr>";
+                    echo "<tr  class='tabelaNomes'>";
                     echo "<td>" . $resultado['nome'] . "</td>";
                     echo "<td><button class='btn-acessar' data-id='" . $resultado['id'] . "'>Acessar</button></td>";
                     echo "<td class='campodesativar'>

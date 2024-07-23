@@ -18,7 +18,6 @@
         <div class="card">
             <div class="card-title">
                 <p>Adicionar Tipo do Evento</p>
-                <span>(pontuacao)</span>
             </div>
 
             <div class="icone-card">
@@ -80,7 +79,7 @@
         </form>
     </div>
 </dialog>
-<dialog id="modal9" class="modal" style="min-height: 310px; !important">
+<dialog id="modal9" class="modal" style="min-height: 310px !important;">
     <div class="modal-content">
         <!-- <h2>Adicionar Tipo Evento</h2> -->
         <form>
