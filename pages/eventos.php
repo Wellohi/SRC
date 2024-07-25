@@ -21,7 +21,8 @@
                             <th>Condicionante</th>
                             <th>Data do Evento</th>
                             <th>Pontuação</th>
-                            <th style="width: 5%;">Ações</th>
+                            <th style="width: 5%;">Acessar</th>
+                            <th style="width: 5%;">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,8 @@
                                     . $row['Condicionante'] . '\', \''
                                     . $row['Data_Evento'] . '\', '
                                     . $row['Pontuacao'] . ')">Acessar</button>';
+                                echo '</td>';
+                                echo '<td style=" width: 100px;">';
                                 echo '<button class="btn danger" style="min-width: 90px; max-width:91px; margin: 0 10%;" onclick="excluirCard(' . $row['ID'] . ')">Excluir</button>';
                                 echo '</td>';
                                 echo '</tr>';

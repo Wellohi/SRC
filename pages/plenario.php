@@ -29,7 +29,7 @@
 
 
 <div class="container-table">
-    <div style="width: 100%; overflow-y: scroll;">
+    <div style="width: 100%; overflow-y: overlay;">
         <table id="plenariosTable" style="width: 100%;">
             <tr>
             <th class="hideColumn">ID</th>
@@ -39,7 +39,8 @@
                 <th>Tipo</th>
                 <th>Condicionante</th>
                 <th>Local</th>
-                <th>Ações</th>
+                <th>Acessar</th>
+                <th>Excluir</th>
             </tr>
             </thead>
             <tbody id="plenariosTableBody">
@@ -61,6 +62,8 @@
                         echo '<td>' . $row['Local'] . '</td>';
                         echo '<td style=" width: 5%;">';
                         echo '<button class="btn info" style="min-width: 90px !important; max-width: 91px !important; margin: 0 10% !important; margin-bottom: 2px !important;" onclick="openModalEvento()">Acessar</button>';
+                        echo '</td>';
+                        echo '<td style=" width: 5%;">';
                         echo '<button class="btn danger" style="min-width: 90px !important; max-width: 91px !important; margin: 0 10% !important; margin-bottom: 2px !important; onclick="excluirCardPlenario(' . $row['ID'] . ')">Excluir</button>';
                         echo '</td>';
                         echo '</tr>';

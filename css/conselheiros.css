@@ -143,7 +143,7 @@
   }
 
   .container-table table{
-    overflow-y: scroll;
+    overflow-y: overlay;
   }
 
 .container-table a{
