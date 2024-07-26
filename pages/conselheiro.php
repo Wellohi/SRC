@@ -7,10 +7,10 @@
 
 <!-- Botão para adicionar conselheiro -->
 <div class="btnadd btnadd-head">
-    <button id="openModal1" class="btn success" style="max-width: 14em !important">Adicionar conselheiro</button>
+    <button id="openModal1" class="btn success" style="min-width: 14em;">Adicionar conselheiro</button>
 </div>
 
-<button id="openModal5" class="restaurar" style="width: 14em">Conselheiros desativados</button>
+<button id="openModal5" class="restaurar" style="min-width: 14em;">Conselheiros desativados</button>
 
 
 <div class="box">
@@ -89,13 +89,13 @@
 
 
 <div class="container-table">
-    <div style=" width: 100%;" class="tableOverflow">
+    <div style=" width: 70%;" class="tableOverflow">
         <table id="tabela-cadastro" style="width: 100%;">
             <thead>
                 <tr>
                     <th>Nome do Conselheiro</th>
-                    <th style= "width:15px">Acessar Conselheiro</th>
-                    <th style= "width:15px">Desativar Conselheiro</td>
+                    <th>Acessar Conselheiro</th>
+                    <th>Desativar Conselheiro</td>
                 </tr>
             </thead>
             <tbody>
@@ -113,8 +113,8 @@
                 foreach ($resultados as $resultado) {
                     echo "<tr  class='tabelaNomes'>";
                     echo "<td>" . $resultado['nome'] . "</td>";
-                    echo "<td><button class='btn-acessar' data-id='" . $resultado['id'] . "'>Acessar</button></td>";
-                    echo "<td class='campodesativar'>
+                    echo "<td class='acessarDesativar'><button class='btn-acessar' data-id='" . $resultado['id'] . "'>Acessar</button></td>";
+                    echo "<td class='campodesativar acessarDesativar'>
 
                     <button id='openModal4' class='btn-desativarconselheiro danger btnremove' 
                             data-id='" . $resultado['id'] . "'

@@ -157,9 +157,13 @@
   color: white;
 }
 
+.tablinks:hover{
+  background-color: #9c7615;
+}
+
 /* container - Legenda: Registrar evento */
 .container legend{
-  font-family: Futara;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: x-large;
   margin: 0 10px 0 10px;
 }
@@ -185,7 +189,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  font-family: Futara;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
 }
 
@@ -325,7 +329,7 @@ tr:nth-child(odd) td {
 
 .cadevento{
   margin-top: 70px;
-  font-family: Futara;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
   text-align: center;
 }
@@ -344,13 +348,13 @@ tr:nth-child(odd) td {
 
 .informacoes{
   margin-top: 70px;
-  font-family: Futara;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
   text-align: center;
 }
 
 .informacoes textarea{
-  font-family: Futara;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
   text-align: center;
 } 

@@ -53,12 +53,16 @@
     height: 2em;
     float: right;
     border-radius: 5px;
-    margin: 10px 25% 0 0;
+    margin: 10px 30% 0 0;
 }
 
 /* Estilo da coluna "desativar" */
-.campodesativar {
+/* .campodesativar {
     width: 10%;
+} */
+
+.acessarDesativar{
+    width: 165px;
 }
 
 /* Estilo da tabela */
@@ -129,7 +133,7 @@
 
 .head-tab, .head-tab th{
     font-weight:400;
-    height: 40px;
+    height: 25px;
 }
 
 .container-table {

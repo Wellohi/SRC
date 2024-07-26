@@ -14,7 +14,7 @@
 <br>
 
 <div class="container-table">
-    <div style="width: 100%;" class="tableOverflow">
+    <div style="width: 70%;" class="tableOverflow">
         <table id="conselheirosTable" style="width: 100%;">
           <tr class="head-tab">
             <th onclick="sortTableByName()" class="classificando"> Nome do Conselheiro <i class="fa-solid fa-arrow-up-z-a"></i> </th>
