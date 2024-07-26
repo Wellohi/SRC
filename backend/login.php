@@ -4,11 +4,11 @@
 require_once('./conexao.php');
 
 // Verificando se as variáveis POST "nome" e "senha" existem e se o objeto PDO também existe
-if (isset($_POST["nome"]) && isset($_POST["senha"]) && $pdo != null) {
+if (isset($_POST["nome"]) && isset($_POST["bn_senha_usuario"]) && $pdo != null) {
 
     // Preparando uma consulta preparada para buscar um registro na tabela "usuarios" com o nome e a senha fornecidos
-    $query = $pdo->prepare("SELECT * FROM usuarios WHERE nome = ? AND senha = ?");
-    $query->execute(array($_POST["nome"], $_POST["senha"]));
+    $query = $pdo->prepare("SELECT * FROM usuario WHERE nm_usuario = ? AND bn_senha_usuario = ?");
+    $query->execute(array($_POST["nm_usuario"], $_POST["bn_senha_usuario"]));
 
     //TO DO: implementar integração com sistema SSO
     //TO DO: Salvar usuário na sessão
@@ -22,7 +22,7 @@ if (isset($_POST["nome"]) && isset($_POST["senha"]) && $pdo != null) {
         
         // Iniciando uma sessão e armazenando o nome do usuário e se ele é um administrador em um array na variável $_SESSION
         session_start();
-        $_SESSION["users"] = array($user["nome"], $user["adm"]);
+        $_SESSION["users"] = array($user["nm_usuario"], $user["adm_usuario"]);
 
         // Redirecionando o usuário para a página home.php
         echo "<script>window.location = '../pages/home.php'</script>";
@@ -33,6 +33,6 @@ if (isset($_POST["nome"]) && isset($_POST["senha"]) && $pdo != null) {
     }
 
 } else {
-    // Se as variáveis POST "nome" e "senha" não existirem ou se o objeto PDO não existir, redireciona o usuário de volta para a página de login
+    // Se as variáveis POST "nm_usuario" e "senha" não existirem ou se o objeto PDO não existir, redireciona o usuário de volta para a página de login
     echo "<script>window.location = '../index.php'</script>";
 }

@@ -13,13 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = $_POST['adicionarConselheiro'];
 
         // Consulta preparada para inserir um novo registro na tabela "conselheiro" com o nome fornecido
-        $sql_insert_conselheiro = 'INSERT INTO conselheiro (nome) VALUES (:n)';
+        $sql_insert_conselheiro = 'INSERT INTO conselheiro (nm_conselheiro) VALUES (:n)';
 
         // Preparando a consulta com o objeto PDO e armazenando em uma variável
         $stmt_insert_conselheiro = $pdo->prepare($sql_insert_conselheiro);
 
         // Executando a consulta preparada com o nome fornecido
-        $stmt_insert_conselheiro->execute([$nome]);
+        $stmt_insert_conselheiro->execute([$nm_conselheiro]);
 
         // Redirecionando o usuário de volta para a página anterior após a conclusão da operação
         header("Location: " . $_SERVER["HTTP_REFERER"]);

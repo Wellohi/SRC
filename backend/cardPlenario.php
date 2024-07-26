@@ -7,13 +7,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data_plenario = $_POST['inputDataPlenario'];
     $vagas_plenario = $_POST['inputVagasPlenario'];
     $tipo = $_POST['tipoEventoPlenario'];
-    $nomeCondicionante = $_POST['condicionanteDoEventoPlenario'];
+    $nm_condicionante = $_POST['condicionanteDoEventoPlenario'];
     $local = $_POST['inputLocalPlenario'];
 
     $insercao = "INSERT INTO plenario (Nome, Data, Vagas, Tipo, Condicionante, Local) VALUES (?, ?, ?, ?, ?, ?)";
     $insercao = $pdo->prepare($insercao);
     try {
-        $insercao->execute([$nome, $data_plenario, $vagas_plenario, $tipo, $nomeCondicionante, $local]);
+        $insercao->execute([$nome, $data_plenario, $vagas_plenario, $tipo, $nm_condicionante, $local]);
         echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     } catch (PDOException $e) {
         echo 'Erro ao inserir no banco: ' . $e->getMessage();

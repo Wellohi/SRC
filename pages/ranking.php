@@ -32,7 +32,7 @@
 
           foreach ($resultados as $conselheiro) {
             echo "<tr>";
-            echo "<td><a href=\"#\" onclick=\"openModal('" . $conselheiro['Nome'] . "', " . $conselheiro['Pontuacao_Total'] . ")\">" . $conselheiro['Nome'] . "</a></td>";
+            echo "<td><a href=\"#\" onclick=\"openModal('" . $conselheiro['nm_conselheiro'] . "', " . $conselheiro['vl_pontuacao-conselheiro'] . ")\">" . $conselheiro['nm_conselheiro'] . "</a></td>";
             echo "<td>" . $conselheiro['Pontuacao_Total'] . "</td>";
             echo "</tr>";
           } ?>

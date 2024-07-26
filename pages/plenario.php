@@ -54,12 +54,12 @@
                     foreach ($resultados as $row) {
                         echo '<tr>';
                         echo '<td class="hideColumn">' . $row['ID'] . '</td>';
-                        echo '<td>' . $row['Nome'] . '</td>';
-                        echo '<td>' . $row['Data'] . '</td>';
-                        echo '<td>' . $row['Vagas'] . '</td>';
-                        echo '<td>' . $row['Tipo'] . '</td>';
-                        echo '<td>' . $row['Condicionante'] . '</td>';
-                        echo '<td>' . $row['Local'] . '</td>';
+                        echo '<td>' . $row['nm_plenario'] . '</td>';
+                        echo '<td>' . $row['dt_plenario'] . '</td>';
+                        echo '<td>' . $row['qt_vagas'] . '</td>';
+                        echo '<td>' . $row['tp_plenario'] . '</td>';
+                        echo '<td>' . $row['tx_condicionante'] . '</td>';
+                        echo '<td>' . $row['sg_estado_uf'] . '</td>';
                         echo '<td style=" width: 5%;">';
                         echo '<button class="btn info" style="min-width: 90px !important; max-width: 91px !important; margin: 0 10% !important; margin-bottom: 2px !important;" onclick="openModalEvento()">Acessar</button>';
                         echo '</td>';
@@ -93,10 +93,10 @@ function consultarTabela($pdo, $tabela)
 }
 
 // Consultando a tabela "condicionantes"
-$resultadoConsultaCondicionantes = consultarTabela($pdo, "condicionantes");
+$resultadoConsultaCondicionantes = consultarTabela($pdo, "tx_condicionante");
 
 // Consultando a tabela "tipoEvento"
-$resultados = consultarTabela($pdo, "tipoEvento");; ?>
+$resultados = consultarTabela($pdo, "tp_evento");; ?>
 
 
 <dialog id="modal11" class="modal">
@@ -112,14 +112,14 @@ $resultados = consultarTabela($pdo, "tipoEvento");; ?>
             <select name="tipoEventoPlenario" id="tipoEventoPlenario" style="width: 100%;" class="inputPlenario" name="inputPlenario">
                 <option value="" data-default disabled selected>Selecione</option>
                 <?php foreach ($resultados as $resultado) { ?>
-                    <option value="<?php echo $resultado['nomeTipoEvento']; ?>"><?php echo $resultado['nomeTipoEvento']; ?></option>
+                    <option value="<?php echo $resultado['nm_tipo_evento']; ?>"><?php echo $resultado['nm_tipo_evento']; ?></option>
                 <?php } ?>
             </select>
             <span>Condicionate</span>
             <select name="condicionanteDoEventoPlenario" id="condicionanteDoEventoPlenario" class="inputPlenario" name="condicionanteDoEventoPlenario">
                 <option value="" data-default disabled selected>Selecione</option>
                 <?php foreach ($resultadoConsultaCondicionantes as $resultadoConsultaCondicionante) { ?>
-                    <option value="<?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?>"><?php echo $resultadoConsultaCondicionante['nomeCondicionante']; ?></option>
+                    <option value="<?php echo $resultadoConsultaCondicionante['nm_condicionante']; ?>"><?php echo $resultadoConsultaCondicionante['nm_condicionante']; ?></option>
                 <?php } ?>
             </select>
             <span>Local:</span>

@@ -2,15 +2,15 @@
 include_once('./conexao.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome = $_POST['inputNomeDoEvento'];
-    $tipo = $_POST['Tipo'];
-    $nomeCondicionante = $_POST['Condicionante'];
-    $data_evento = $_POST['inputDataDoEvento'];
+    $nm_evento = $_POST['inputNomeDoEvento'];
+    $tp_evento = $_POST['Tipo'];
+    $nm_condicionante = $_POST['Condicionante'];
+    $dt_evento = $_POST['inputDataDoEvento'];
 
-    $insercao = "INSERT INTO evento (Nome, Tipo, Condicionante, Data_Evento) VALUES (?, ?, ?, ?)";
+    $insercao = "INSERT INTO evento (nm_evento, tp_evento, tx_condicionante, dt_evento) VALUES (?, ?, ?, ?)";
     $insercao = $pdo->prepare($insercao);
     try {
-        $insercao->execute([$nome, $tipo, $nomeCondicionante, $data_evento]);
+        $insercao->execute([$nm_evento, $tp_evento, $nm_condicionante, $dt_evento]);
         echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     } catch (PDOException $e) {
         echo 'Erro ao inserir no banco: ' . $e->getMessage();

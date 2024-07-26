@@ -3,13 +3,13 @@
 include_once('./conexao.php');
 
 // obter o nome pesquisado do corpo da solicitação POST
-$nomePesquisado = $_POST['nome'];
+$nomePesquisado = $_POST['nm_conselheiro'];
 
 // preparar a consulta SQL para obter os conselheiros correspondentes
-$stmt = $pdo->prepare("SELECT id, nome FROM conselheiro WHERE excluido = 0 AND nome LIKE :nome ORDER BY nome");
+$stmt = $pdo->prepare("SELECT id_conselheiro, nm_conselheiro FROM conselheiro WHERE excluido = 0 AND nm_conselheiro LIKE :nome ORDER BY nm_conselheiro");
 
 // vincular o valor do nome pesquisado ao parâmetro de consulta
-$stmt->bindValue(':nome', '%' . $nomePesquisado . '%');
+$stmt->bindValue(':nm_conselheiro', '%' . $nomePesquisado . '%');
 
 // executar a consulta
 $stmt->execute();
@@ -17,13 +17,13 @@ $stmt->execute();
 // iterar sobre os resultados e gerar a tabela HTML correspondente
 foreach ($stmt as $resultado) {
     echo "<tr>";
-    echo "<td>" . $resultado['nome'] . "</td>";
-    echo "<td><button class='btn-acessar' data-id='" . $resultado['id'] . "'>Acessar</button></td>";
+    echo "<td>" . $resultado['nm_conselheiro'] . "</td>";
+    echo "<td><button class='btn-acessar' data-id='" . $resultado['id_conselheiro'] . "'>Acessar</button></td>";
     echo "<td class='campodesativar'>
         <button id='openModal4' class='btn danger btnremove' 
-                data-id='" . $resultado['id'] . "'
-                data-nome='" . $resultado['nome'] . "'>Desativar</button>
-        <input type='hidden' class='id-conselheiro' value='" . $resultado['id'] . "'>
+                data-id='" . $resultado['id_conselheiro'] . "'
+                data-nome='" . $resultado['nm_conselheiro'] . "'>Desativar</button>
+        <input type='hidden' class='id-conselheiro' value='" . $resultado['id_conselheiro'] . "'>
         </td>";
     echo "</tr>";
 }
@@ -32,11 +32,11 @@ foreach ($stmt as $resultado) {
 <?php
 // Iterando novamente para criar os modais correspondentes a cada conselheiro
 foreach ($stmt as $resultado) {
-    echo "<dialog id='modal-acessar-" . $resultado['id'] . "' class='modal'>";
+    echo "<dialog id='modal-acessar-" . $resultado['id_conselheiro'] . "' class='modal'>";
     echo "<div class='modal-content'>";
-    echo "<h1>" . $resultado['nome'] . "</h1>";
-    echo "<h2>" . $resultado['id'] . "</h2>";
-    echo "<p>Pontuação total: " . $resultado['Pontuacao_Total'] . "</p>";
+    echo "<h1>" . $resultado['nm_conselheiro'] . "</h1>";
+    echo "<h2>" . $resultado['id_conselheiro'] . "</h2>";
+    echo "<p>Pontuação total: " . $resultado['vl_pontuacao_conselheiro'] . "</p>";
     // Adicione aqui as informações que deseja exibir no modal
     echo "</div>";
     echo "</dialog>";

@@ -5,14 +5,14 @@ require_once('./conexao.php');
 // verificando se o formulário foi submetido
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // recuperando os valores do formulário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $nome = $_POST['nm_gestor'];
+    $email = $_POST['tx_email_gestor'];
+    $senha = $_POST['bn_senha_gestor'];
 
     // inserindo os valores no banco de dados
-    $sql = "INSERT INTO gestor (nome, email, senha) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO gestor (nm_gestor, tx_email_gestor, bn_senha_gestor) VALUES (?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$nome, $email, $senha]);
+    $stmt->execute([$nm_gestor, $tx_email_gestor, $sbn_senha_gestorenha]);
 
     // verificando se a operação foi bem-sucedida
     if ($stmt->rowCount() > 0) {
